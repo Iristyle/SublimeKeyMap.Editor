@@ -1,4 +1,7 @@
  [
+    // since we assign Ctrl+Shift+V to clipboard manager, use paste / indent with default Ctrl+v
+    { "keys": ["ctrl+v"], "command": "paste_and_indent" },
+
     //HACK: override the vertical column selections to use Ctrl+Shift in RDP
     { "keys": ["ctrl+shift+up"], "command": "select_lines", "args": {"forward": false} },
     { "keys": ["ctrl+shift+down"], "command": "select_lines", "args": {"forward": true} },
