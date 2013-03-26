@@ -5,7 +5,7 @@
     //HACK: override the vertical column selections to use Ctrl+Shift in RDP
     { "keys": ["ctrl+shift+up"], "command": "select_lines", "args": {"forward": false} },
     { "keys": ["ctrl+shift+down"], "command": "select_lines", "args": {"forward": true} },
- 
+
     //HACK: restore default shift+tab keybindings because SmartMarkdown messes with them too much
     { "keys": ["shift+tab"], "command": "insert", "args": {"characters": "\t"} },
     { "keys": ["shift+tab"], "command": "unindent", "context":
@@ -28,10 +28,10 @@
             { "key": "has_prev_field", "operator": "equal", "operand": true }
         ]
     },
- 
+
     //Abacus - https://github.com/khiltd/Abacus
     { "keys": ["ctrl+alt+\\"], "command": "abacus" },
-  
+
     // Bracketeer - https://github.com/colinta/SublimeBracketeer
     { "keys": ["super+]"], "command": "bracketeer_indent" },
     { "keys": ["ctrl+shift+["], "command": "bracketeer_select" },
@@ -295,7 +295,7 @@
             { "key": "selector", "operator": "equal", "operand": "text.restructuredtext" }
         ]
     },
- 
+
     //BracketHighlighter - https://github.com/facelessuser/BracketHighlighter/
     {
         "keys": ["ctrl+shift+b", "ctrl+shift+b"], "command": "bracket_highlighter_key",
@@ -381,7 +381,7 @@
             "plugin": {"type": ["quote", "tag", "bracket"],"command" : "bracket_plugins.fold_bracket"}
         }
     },
- 
+
     // ClipboardManager - https://github.com/colinta/SublimeClipboardManager
     { "keys": ["ctrl+x"], "command": "clipboard_manager_cut" },
     { "keys": ["ctrl+c"], "command": "clipboard_manager_copy" },
@@ -392,13 +392,31 @@
     //{ "keys": ["ctrl+pagedown"], "command": "clipboard_manager_previous" },
     //{ "keys": ["ctrl+home"], "command": "clipboard_manager_show" },
     { "keys": ["ctrl+shift+v"], "command": "clipboard_manager_choose_and_paste" },
- 
+
+    // EasyMotion - https://github.com/tednaleid/sublime-EasyMotion
+    {
+        "keys": ["ctrl+.", "<character>"],
+        "command": "easy_motion", "args": {"select_text": false}
+    },
+    {
+        "keys": ["ctrl+.", "enter"],
+        "command": "easy_motion", "args": {"select_text": false, "character": "enter"}
+    },
+    {
+        "keys": ["ctrl+shift+.", "<character>"],
+        "command": "easy_motion", "args": {"select_text": true}
+    },
+    {
+        "keys": ["ctrl+shift+.", "enter"],
+        "command": "easy_motion", "args": {"select_text": true, "character": "enter"}
+    },
+
     // ExportHTML - https://github.com/facelessuser/ExportHtml
     // use defaults
- 
+
     // FileDiffs - https://github.com/colinta/SublimeFileDiffs
     { "keys": ["ctrl+shift+d"], "command": "file_diff_menu" },
- 
+
     // MarkDown Preview - https://github.com/revolunet/sublimetext-markdown-preview
     { "keys": ["ctrl+alt+m"], "command": "markdown_preview", "args": {"target": "browser"} },
 
@@ -442,10 +460,10 @@
     "keys": ["super+shift+,"], "command": "change_heading_level", "args": {"up": false}, "context": [
       {"key": "selector", "operator": "equal", "operand": "text.html.markdown"}
     ]},
- 
+
     //Sublime Text 2 - Related Files - https://github.com/fabiokr/sublime-related-files
     { "keys": ["ctrl+alt+t"], "command": "related_files" },
- 
+
     //SublimeTODO - https://github.com/robcowie/SublimeTODO
     // {
     //    "keys": ["n"], "command": "goto_next_result",
@@ -497,7 +515,7 @@
         // {"key": "setting.todo_results"}
         "context": [{"key": "setting.command_mode", "operand": true}]
     },
- 
+
     //Snippet Browsing Keybindings
     { "keys": ["shift+f1"], "command": "show_overlay",
         "args": {"overlay": "command_palette", "text": "snippet"} }

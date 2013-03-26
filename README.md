@@ -14,6 +14,7 @@ Designed to be incorporated into `Package Control.sublime-settings` like:
         "Bracketeer",
         "BracketHighlighter",
         "Clipboard Manager",
+        "EasyMotion",
         "ExportHtml",
         "FileDiffs",
         "Markdown Preview",
