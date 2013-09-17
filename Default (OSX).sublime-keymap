@@ -329,7 +329,7 @@
         "keys": ["super+shift+;", "enter"],
         "command": "easy_motion",
         "args": {"select_text": true, "character": "enter"}
-    }
+    },
 
     // ExportHTML - https://github.com/facelessuser/ExportHtml
     // use defaults
